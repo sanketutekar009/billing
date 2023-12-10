@@ -1,0 +1,27 @@
+body{background: #f9f9f9;}
+.brand-logo{margin-left: 10px; font-size: 18px !important;}
+.black{color:#212121;}
+.mT10{margin-top: 10px;}
+.mT20{margin-top: 20px;}
+.mT30{margin-top: 30px;}
+.mT40{margin-top: 40px;}
+.mB10{margin-bottom: 10px;}
+.mB20{margin-bottom: 20px;}
+.mB30{margin-bottom: 30px;}
+.mB40{margin-bottom: 40px;}
+.mR10{margin-right: 10px;}
+.mL10{margin-left: 10px;}
+.mL20{margin-left: 20px;}
+.mL30{margin-left: 30px;}
+.txt-left{text-align: left;}
+.txt-center{text-align: center;}
+.txt-right{text-align: right;}
+
+.dropdown-content li{border-bottom: 1px solid #f2f2f2; }
+#editable-table th{padding: 5px;border:1px solid #f2f2f2;}
+#editable-table td{padding: 3px;border:1px solid #f2f2f2;}
+.focus{background: #E8E8E8;}
+
+.tr-header{cursor: pointer;background-color: #fff;border-bottom: 1px solid #ddd;border-top: 1px solid #ddd;}
+.tr-body{background:#FCFCFC;}
+.tr-header i, .tr-header span{display: inline-block;float: left;}

@@ -1,0 +1,399 @@
+Sr. No.,Particulars,HSN Code,GST %,Rate
+1,20-20 Cookies,1905,18,5
+2,50-50 Biscuits Small,1905,18,5
+3,50-50 Bisuits,1905,18,10
+4,7up 2 Ltrs.,2202,28,25
+5,7up 600ml.,2202,28,40
+6,7up Tin,2202,28,25
+7,A-1 Garbage Bags 19x21,3928,18,48
+8,A-1 Garbage Bags 19x21,3928,18,60
+9,A-1 Garbage Bags 25x30,3928,18,65
+10,A-1 Garbage Bags 29x39,3928,18,70
+11,Aata Noodles,7186,18,20
+12,Air Wick Room Freshner,3307,28,150
+13,Ala 200ml.,3402,28,28
+14,Ala 500ml.,3204,28,58
+15,Almonds 100gm.,802,12,100
+16,Almonds 1Kg.,802,12,1000
+17,Almonds 500gm.,802,12,500
+18,Alpenliebe,1704,18,100
+19,Amul Butter 100gm,405,12,44
+20,Amul Butter 500gm.,405,12,215
+21,Amul Cheese Cube 200gm.,406,12,105
+22,Amul Cheese Slice 100gm.,406,12,69
+23,Amul Cheese Slice 200gm.,406,12,118
+24,Amul Chhas,403,0,12
+25,Amul Kool,2201,12,20
+26,Amul Lassi,403,0,20
+27,Amul Tazza 1Ltr.,401,5,62
+28,Apple,808,0,
+29,Appy Tetra Pack,2202,12,10
+30,Aquafina 1Ltr.,2201,18,20
+31,Aquafina 500ml.,2201,18,10
+32,Ariel 1Kg.,3402,28,199
+33,Ariel 500gm.,3402,28,102
+34,Bailley 20Ltrs.,2201,18,85
+35,Banana,803,0,
+36,Beetroots,706,0,
+37,Bhujia Sev 1Kg.,2106,12,210
+38,Bhujia Sev 350gm.,2106,12,35
+39,Bisleri 1Ltr.,2201,18,20
+40,Bisleri 20Ltrs.,2201,18,90
+41,Bisleri 250ml.,2201,18,6
+42,Bisleri 2Ltrs.,2201,18,30
+43,Bisleri 300ml.,2201,18,10
+44,Bisleri 500ml.,2201,18,10
+45,Bisleri 5Ltrs.,2201,18,65
+46,Black Berry,801,0,
+47,Black Grapes,806,0,
+48,Bourbon,1905,18,20
+49,Bourbon Family,1905,18,27
+50,Bourbon Small,1905,18,10
+51,Britannia Cheese Block 500gm,406,12,250
+52,Broccoli,,,
+53,Bru Café 50gm.,2101,28,90
+54,Bru Café Pouch,2101,28,95
+55,Cabbage,704,0,
+56,Cadbury Eclairs,1189,28,200
+57,Cadbury Eclairs 116units,1189,28,116
+58,Cadbury Silk Big,1806,28,165
+59,Cadbury Silk Small,1806,28,70
+60,Cadbury Temptation,1806,28,90
+61,Cake 1Kg.,1905,18,750
+62,Cake 500gm.,1905,18,375
+63,Capsicum,709,0,
+64,Carrots,706,0,
+65,Cashew Nuts 100gm.,801,5,120
+66,Cashew Nuts 1Kg.,801,5,1200
+67,Cashew Nuts 500gm.,801,5,600
+68,Chandu's Gulab Jamun 500gm,2106,12,100
+69,Chandu's Rassogullaa 500gm.,2106,12,100
+70,Chandu's Soan Papdi,2106,12,65
+71,Chheda’s Bhajni Chakli 200gm.,2106,12,45
+72,Chheda’s Diet Bhel 200gm.,2106,12,45
+73,Chheda’s Diet Chiwda 200gm.,2106,12,45
+74,Chheda’s Mini Khakhara (Diet Snacks),2106,12,40
+75,Chheda’s Mix Farsan 200gm.,2106,12,45
+76,Chheda’s Potato Chips 100gm.,2106,12,26
+77,Chheda’s Soya Snacks 200gm.,2106,12,50
+78,Chheda’s Yellow Banana Chips 75gm.,2106,12,35
+79,Chheda's Bhakarwadi,2106,12,10
+80,Chheda's Bhel Mix,2106,12,10
+81,Chheda's Black Pepper Banana chips,2106,12,24
+82,Chheda's Butter Chakli,2106,12,36
+83,Chheda's Peanut Bar,2106,5,10
+84,Chheda's Potato Chips 500gm,2106,12,26
+85,Chheda's Rajgira Chikki,2106,5,10
+86,Chheda's Tasty Nuts,2106,12,50
+87,Chiku,801,0,
+88,Chilly Powder,904,5,
+89,Cling Film 30m.,3920,18,75
+90,Cloth Duster,6301,5,15
+91,Clove,907,5,
+92,Coconut,1513,0,
+93,Coconut Milk Powder,1106,,
+94,Coconut Water,801,0,
+95,Coke 2 Ltrs.,2202,28,35
+96,Coke 600ml.,2202,28,35
+97,Coke Tin,2202,28,35
+98,Colin,3402,28,79
+99,Condensed Milk,402,5,119
+100,Coriander,909,5,
+101,Cracker,1905,18,15
+102,Cream Trat Pinneple,1905,18,10
+103,Cream Treat Chocolate,1905,18,10
+104,Cream Treat Orange,1905,18,10
+105,Cremica French Fries,2106,12,40
+106,Cremica Tomato Ketchup Pouch 1 Kg.,2103,18,120
+107,Cucumber,707,0,
+108,Cumin Seeds,909,5,
+109,Custard Apple,804,0,
+110,Custard Powder,,,
+111,Dabur Honey 100gm.,409,5,59
+112,Dabur Honey 250gm.,409,5,122
+113,Dabur Honey 500gm.,409,5,199
+114,Dahi,4031,0,
+115,Dairy Milk,1806,28,40
+116,Dairy Milk 12.5gm.,1806,28,10
+117,Dairy Milk 25gm.,1806,28,20
+118,Dairy Milk Crakcle,1806,28,40
+119,Dairy Milk Fruits & Nuts,1806,28,42
+120,Dairy Milk Roast Almond,1806,28,45
+121,Dark Fantasy,1905,18,30
+122,Dettol Handwash 900ml.,3401,18,189
+123,Dettol Handwash Pouch,3401,18,49
+124,Dettol Handwash Pump,3401,18,82
+125,Diet Coke,2202,28,90
+126,Diet Pepsi Tin,2202,28,25
+127,Digestive,1905,18,20
+128,Dranex,,,20
+129,Dustbin Bags,3923,18,
+130,Envelopes,4817,18,
+131,Everest Chat Masala,910,5,33
+132,Everest Chicken Masala 50gm.,910,5,38
+133,Everest Garam Masala 50gm.,910,5,41
+134,Everest Sambhar Masala 50gm.,910,5,28
+135,Everest Tea Masala 50gm.,902,5,48
+136,Every Day Dairy Whitener 1Kg.,402,5,413
+137,Every Day Dairy Whitener 200gm.,402,5,97
+138,Every Day Dairy Whitener 400gm.,402,5,163
+139,Exo,3402,28,45
+140,Ferrero Rocher,1806,28,475
+141,Fevicol,3506,18,
+142,Five Star,1806,28,10
+143,Five Star Small,1806,28,5
+144,Flowers Arrangements,601,0,300
+145,Frooti Tetra Pack,2202,12,10
+146,Garlic,701,0,
+147,Garlic Bread,,5,
+148,Gatorade,2201,28,45
+149,Ghee 500gm.,405,12,235
+150,Gherkin,707,0,
+151,Ginger Dry,111,0,
+152,Godrej Aer Pockets,3307,28,55
+153,Godrej Aer Room Freshner,3307,28,150
+154,Goodday Butter,1905,18,10
+155,Goodday Butter Small,1905,18,5
+156,Goodday Cashew 100gm.,1905,18,20
+157,Goodday Cashew Family Pack,1905,18,35
+158,Goodday Cashew Small,1905,18,10
+159,Goodday Chocochips,1905,18,30
+160,Goodday Pista,1905,18,20
+161,Govardhan Chhas,403,0,12
+162,Govardhan Dahi 200gm.,4031,0,25
+163,Govardhan Flavoured Milk,2202,12,25
+164,Govardhan Milk 1Ltr.,2202,5,45
+165,Green Chilly,709,0,
+166,Green Curry Paste,,,
+167,Green Elaichi 100gm.,902,5,200
+168,Green Grapes,806,0,
+169,Haldiram Salted Cashew,801,12,50
+170,Haldiram Snacks (Big),2106,12,35
+171,Haldiram Snacks (Small),2106,12,10
+172,Haldiram Soan Papdi 500gm.,2106,12,115
+173,Happy Happy Cookies,1905,18,5
+174,Harpic,3008,18,76
+175,Hershey's Milk shake 200ml.,2202,12,35
+176,Hershey's Syrup 200ml.,1806,28,100
+177,Hershey's Syrup 623ml.,1806,28,200
+178,Hide & Seek,1905,18,30
+179,Hit Spray,3808,12,165
+180,Janta Mukhwas 1 Kg.,804,12,280
+181,Jim Jam,1905,18,20
+182,Jivana Sugar,1701,5,55
+183,Khaman Redimix,2106,5,
+184,Kisan Tomato Ketchup Pouch 1 Kg.,2103,18,125
+185,Kismis,806,5,
+186,Kismis 100gm.,806,5,50
+187,Kismis 500gm,806,5,250
+188,Kissan Mixed Fruit Jam 200gm.,2007,12,60
+189,Kissan Mixed Fruit Jam 500gm.,2007,12,130
+190,Kiwi,801,0,
+191,Knorr Soup (Big),2104,18,55
+192,Knorr Soup (Small),2104,18,10
+193,Krackjack,1905,18,10
+194,Krackjack Small,1905,18,5
+195,Lays (Big),2106,12,20
+196,Lays (Small),2106,12,10
+197,Lettuce,705,0,
+198,Lexi Refills,9608,12,3
+199,Lichi,801,0,
+200,Lifebouy Handwash Pouch,3401,18,46
+201,Lifebuoy Handwash,3401,18,77
+202,Lijjat Papad,1905,0,58
+203,Lipton Green Tea Lemon,902,5,140
+204,Lipton Green Tea Pure,902,5,150
+205,Lizol 1Ltr.,3808,18,158
+206,Lizol 2Ltrs.,3808,18,315
+207,Lizol 500ml.,3808,18,79
+208,Loose Aata.,,0,
+209,Loose Besan,,0,
+210,Loose Maida,,0,
+211,Madhur Sugar,1701,5,55
+212,Maggi Noodle 4's Pack,7186,18,45
+213,Maggi Noodle Double Pack,7186,18,24
+214,Maggi Noodles,7186,18,12
+215,Maggi Pazzta,7192,18,25
+216,Maggi Tomato Ketchup 1Kg.,2103,18,145
+217,Maggi Tomato Ketchup 500gm.,2103,18,98
+218,Mahabaleshwar Chana 100gm.,2008,12,36
+219,Mahabaleshwar Chana 1kg,2008,12,360
+220,Marie Family,1905,18,27
+221,Marie Gold,1905,18,10
+222,Marie Gold Small,1905,18,5
+223,Maruti Tissue Box,4818,18,50
+224,Masca Chaska,1905,18,10
+225,Mayonnaise,2103,28,
+226,Mentos,3003,28,100
+227,Mint Mentos,3003,28,120
+228,Minute Maid Pulpy Orange,2202,12,30
+229,Mirinda 2 Ltrs.,2202,28,10
+230,Mirinda 600ml.,2202,28,90
+231,Mirinda Tin,2202,28,6
+232,Mix Chocolates Candy,1704,18,100
+233,Monaco,1905,18,10
+234,Monaco Cheese Cracker,1905,18,30
+235,Monaco Small,1905,18,5
+236,Mother Dairy Chhas,403,0,12
+237,Mother Dairy Dahi 200gm.,4031,0,25
+238,Mother Dairy Dahi 400gm.,4031,0,55
+239,Mother Dairy Lassi,403,0,20
+240,Mother Dairy Milk 1Ltr.,401,5,62
+241,Mother’s Chhundo,2001,12,107
+242,Mother’s Pickle 1Kg.,2001,12,170
+243,Mother’s Pickle 400gm.,2001,12,94
+244,Mountain Dew Tin,2202,28,25
+245,Mushroom,709,0,
+246,Musk Melon,807,0,
+247,Nepthalin Balls,2904,,50
+248,Nescafe 100gm.,2101,28,290
+249,Nescafe 200gm.,2101,28,450
+250,Nescafe 500gm.,2101,28,980
+251,Nescafe 50gm.,2101,28,145
+252,Nescafe 50gm. Bottle,2101,28,155
+253,Nescafe Pouch,2101,28,96
+254,Nestea,2202,28,20
+255,Nestle Milk 1Ltr.,401,5,75
+256,Nice,1905,18,10
+257,Nice Family,1905,18,22
+258,Nimbooz,2202,28,20
+259,Nutrichoice Oats & Milk,1905,18,20
+260,Oats Biscuit,1905,18,30
+261,Olives,1509,0,
+262,Onion,703,0,
+263,Oranges,805,0,
+264,Oreo,1905,18,30
+265,Oreo Small,1905,18,10
+266,Organic Green Tea (Eco Valley),902,5,150
+267,Organic India Tulsi Ginger,902,5,138
+268,Paneer,406,5,
+269,Pann,4064,0,
+270,Papaya,807,0,
+271,Paper Glass 150ml.,3923,18,1
+272,Paper Glass 200ml.,3923,18,1
+273,Paper Plates Silver no.1,4823,18,70
+274,Paper Plates Silver no.3,4823,18,50
+275,Paper Plates Super no. 5,4823,18,20
+276,Paper Plates Super no.3,4823,18,35
+277,Paper Plates Super no.4,4823,18,30
+278,Parle G,1905,18,10
+279,Parle G Small,1905,18,5
+280,Pear,808,0,
+281,Penne Pasta,1902,18,
+282,Pepsi 2Ltrs.,2202,28,90
+283,Pepsi 600ml.,2202,28,40
+284,Pepsi Tin,2202,28,25
+285,Pineapple,804,0,
+286,Pizza Bread,,5,
+287,Plastic Bowl,3924,18,1
+288,Plastic Bowl 100's Pack,3924,18,80
+289,Plastic Fork,3924,18,100
+290,Plastic Glass 250ml.,3923,18,1
+291,Plastic Glass 300ml.,3923,18,2
+292,Plastic Spoon,3924,18,1
+293,Pomegranate,801,0,
+294,Potato,701,0,
+295,Pravin Pickle,2001,12,55
+296,Pravin Pickle 1Kg.,2001,12,160
+297,Premier Tissue,4818,18,60
+298,Premium Room Freshner,3307,28,125
+299,Pumkin,709,0,
+300,Pure Magic,1905,18,25
+301,Rajwadi Mukhwas 1Kg.,804,12,460
+302,Rava,,0,
+303,Red Bull,2202,28,110
+304,Red Curry Paste,,,
+305,Rin Bar,3401,18,10
+306,Rin Bar,3401,18,10
+307,Roasted Chana (Yellow) 100gm.,2008,12,28
+308,Sabudana,1106,5,
+309,Sagar Ghee 1Kg.,405,12,455
+310,Salted Peanuts 100gm.,2008,12,30
+311,Salted Pista 250gm,8025,5,350
+312,Scotch Brite,3926,18,15
+313,Silver Foil 9m.,7607,28,65
+314,Slice 1Ltr.,2202,12,65
+315,Slice 600ml.,2202,12,37
+316,Society Tea 250gm.,902,5,115
+317,Society Tea 500gm.,902,5,215
+318,Soya Milk 200ml,2202,12,30
+319,Spiral Book,4820,18,45
+320,Sponge Scotch Brite,3926,18,30
+321,Spring File,4820,18,
+322,Sprite 2 Ltrs.,2202,28,90
+323,Sprite 600ml.,2202,28,40
+324,Strawberry,801,0,
+325,Sugar,1701,5,46
+326,Sugar Cubes,1701,18,60
+327,Sugar Free Natura,1701,18,65
+328,Sugar Free Natura Powder,1701,18,155
+329,Sun Feast Cream,1905,18,10
+330,Sunny Phenoil (1Ltr.),3808,18,159
+331,Sunny Phenoil 200ml.,3808,18,36
+332,Sunny Phenoil 500ml.,3808,18,82
+333,Sunrise Café 50gm.,2101,28,90
+334,Sunrise Café Pouch,2101,28,100
+335,Surf Easy Wash 500gm.,3402,28,56
+336,Surf Excel 1Kg.,3402,28,199
+337,Surf Excel 500gm.,3402,28,101
+338,Surf Excel Bar,3401,18,10
+339,Sweetlime,805,0,
+340,Taj Mahal Tea Bags,902,5,136
+341,Tata Besan 500gm.,,5,64
+342,Tata Salt,2501,0,18
+343,Tata Tea 250gm.,902,5,105
+344,Tata Tea 500gm.,902,5,205
+345,Tetley Elaichi Tea Bags,902,5,200
+346,Tetley Ginger Tea Bags,902,5,200
+347,Tetley Green Tea Bags (10’s pack),902,5,60
+348,Tetley Green Tea Bags (100’s pack),902,5,450
+349,Tetley Green Tea Bags (30’s pack),902,5,140
+350,Tetley Lemon Tea bags,902,5,200
+351,Tetley Masala Tea Bags,902,5,200
+352,Tetley Tea Bags,902,5,123
+353,Thermocol Plates Pkt.,4823,18,63
+354,Thumsup 2 Ltrs.,2202,28,90
+355,Thumsup 200ml.,2202,28,15
+356,Thumsup 600ml.,2202,28,40
+357,Tide Powder 1Kg.,3402,28,96
+358,Tide Powder 500gm.,3402,28,49
+359,Tiger Crunch,1905,18,5
+360,Tissue Box,4818,18,50
+361,Tissue Paper,4818,18,25
+362,Tomato,702,0,
+363,Tropican Cranberry 1Ltr.,2202,12,110
+364,Tropicana Juice 100% 1Ltr.,2202,12,120
+365,Tropicana Juice 1Ltr.,2202,12,99
+366,Tropicana Juice 200ml.,2202,12,20
+367,Tropicana Pomegranate 1Ltr.,2202,12,110
+368,Turmeric Powder,910,5,
+369,Twinnig Earl Grey Tea Bag,902,5,285
+370,Twinnig Earl Grey Tea Bag 100's,902,5,850
+371,Twinnig Green Tea,902,5,285
+372,Unibic Butter Cookies,1905,18,25
+373,Unibic Cashew Cookies,1905,18,25
+374,Unibic Chocochips Cookies,1905,18,20
+375,Unibic Pista Cookies,1905,18,25
+376,Vagh Bakri 250gm.,902,5,110
+377,Vagh Bakri 500gm.,902,5,215
+378,Vedika 1 Ltr. Box,2201,18,480
+379,Vedika 250ml. Box,2201,18,360
+380,Vedika 500ml. Box,2201,18,500
+381,Vermicelli,1902,5,
+382,Vim Bar Soap,3402,28,10
+383,Vim Bar Soap 300gm.,3402,28,27
+384,Vim Liquid 250gm.,3402,28,58
+385,Vim Liquid 500gm.,3402,28,115
+386,Vim Liquid Pouch,3402,28,20
+387,Vita Marie,1905,18,10
+388,Vita Marie Big,1905,18,20
+389,Walnut,802,12,
+390,Water Melon,807,0,
+391,Wheel Bar,3401,18,5
+392,Wheel Bar,3401,18,5
+393,Wheel Powder Small,3402,28,10
+394,Wonderfulls Berries Cookies,1905,18,25
+395,Wonderfulls Butter Cookies,1905,18,25
+396,Wonderfulls Choconut,1905,18,25
+397,Xerox Copies,2886,12,1
+398,Yippee Noodles,7186,18,10
