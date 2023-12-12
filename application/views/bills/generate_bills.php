@@ -28,9 +28,9 @@
                         </div>
                         <div class="col s4 m1 mT40">
                             <select class="browser-default" name="print_details">
-                                <option value="" disabled selected>Print Details</option>
-                                <option value="no">No</option>
-                                <option value="yes">Yes</option>
+                                <option value="" disabled>Print Details</option>
+                                <option value="0" selected>No</option>
+                                <option value="1">Yes</option>
                             </select>
                         </div>
                         <div class="input-field col s12 m2 mT40">
@@ -57,6 +57,7 @@
                                             <th>Products</th>
                                             <th style="display: none;">HSN</th>
                                             <th>MRP</th>
+                                            <th>Special Rate</th>
                                             <th style="display: none;">GST%</th>
                                             <th style="display: none;">CESS</th>
                                             <th style="width:8%;">&nbsp;</th>
@@ -68,7 +69,7 @@
                                                 <td><?php echo $values["qty"]; ?></td>
                                                 <td class="autocomplete"><?php echo $values["item_name"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["hsn"]; ?></td>
-                                                <td mrp="<?php echo $values["actual_mrp"]; ?>"><?php echo $values["mrp"]; ?></td>
+                                                <td><?php echo $values["special_rate"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["cgst"]+$values["sgst"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["cess"]; ?></td>
                                                 <td class="edit-disabled" lang="<?php echo $values['item_id']; ?>">
@@ -87,7 +88,8 @@
                                                 <td></td>
                                                 <td class="autocomplete"></td>
                                                 <td style="display: none;"></td>
-                                                <td mrp=""></td>
+                                                <td></td>
+                                                <td></td>
                                                 <td style="display: none;"></td>
                                                 <td style="display: none;"></td>
                                                 <td class="edit-disabled">
@@ -263,14 +265,14 @@
                 var Obj = $(".autocomplete:eq('"+eq+"')").parent();
                 $("td:eq('2')", Obj).text(hsn);
                 $("td:eq('3')", Obj).text(mrp);
-                $("td:eq('3')", Obj).attr('mrp', mrp);
-                $("td:eq('4')", Obj).text(gst);
+                $("td:eq('4')", Obj).text(0);
+                $("td:eq('5')", Obj).text(gst);
                 $(".autocomplete:eq('"+eq+"')").text(product_selected);
             }   
         });
 
         $(document).on("click",".add_more",function(){
-            var add_more = '<tr><td></td><td class="autocomplete"></td><td style="display:none;"></td><td mrp=""></td><td style="display:none;"></td><td style="display:none;"></td><td class="edit-disabled"><a class="btn-floating btn-small add_more" href="javascript:;"><i class="small material-icons">add</i></a><a class="btn-floating btn-small remove_more mR10 mL10 red" href="javascript:;"><i class="small material-icons">delete</i></a></td></tr>';
+            var add_more = '<tr><td></td><td class="autocomplete"></td><td style="display:none;"></td><td></td><td></td><td style="display:none;"></td><td style="display:none;"></td><td class="edit-disabled"><a class="btn-floating btn-small add_more" href="javascript:;"><i class="small material-icons">add</i></a><a class="btn-floating btn-small remove_more mR10 mL10 red" href="javascript:;"><i class="small material-icons">delete</i></a></td></tr>';
             $("tr:last").after(add_more);
             $('#editable-table').editableTableWidget({
                 disableClass: "edit-disabled",
@@ -315,7 +317,7 @@
             var products = new Array();
             var qty = new Array();
             var mrp = new Array();
-            var actual_mrp = new Array();
+            var special_rate = new Array();
             var gst = new Array();
             var cess = new Array();
             var ids = new Array();
@@ -326,9 +328,9 @@
                 var products_value = $.trim($("td:eq('1')",this).text());
                 var hsn_value = $.trim($("td:eq('2')",this).text());
                 var mrp_value = $.trim($("td:eq('3')",this).text());
-                var actual_mrp_value = $.trim($("td:eq('3')",this).attr('mrp'));
-                var gst_value = $.trim($("td:eq('4')",this).text());
-                var cess_value = $.trim($("td:eq('5')",this).text());
+                var special_rate_value = $.trim($("td:eq('4')",this).text());
+                var gst_value = $.trim($("td:eq('5')",this).text());
+                var cess_value = $.trim($("td:eq('6')",this).text());
                 var ids_value = $.trim($(".edit-disabled",this).attr("lang"));
                 var is_deleted_value = $.trim($(".edit-disabled",this).attr("element_removed"));
 
@@ -337,7 +339,7 @@
                     products.push(products_value);
                     qty.push(qty_value);
                     mrp.push(mrp_value);
-                    actual_mrp.push(actual_mrp_value)
+                    special_rate.push(special_rate_value)
                     gst.push(gst_value);
                     cess.push(cess_value);
                     ids.push(ids_value);
@@ -358,11 +360,12 @@
                             bill_date:$("input[name='bill_date']").val(),
                             bill_discount:$("input[name='bill_discount']").val(),
                             bill_contact_person:$("input[name='bill_contact_person']").val(),
+                            print_details:$("select[name='print_details']").val(),
                             hsn:hsn,
                             products:products,
                             qty:qty,
                             mrp:mrp,
-                            actual_mrp:actual_mrp,
+                            special_rate:special_rate,
                             gst:gst,
                             cess:cess
                         },
@@ -387,11 +390,12 @@
                             bill_date:$("input[name='bill_date']").val(),
                             bill_discount:$("input[name='bill_discount']").val(),
                             bill_contact_person:$("input[name='bill_contact_person']").val(),
+                            print_details:$("select[name='print_details']").val(),
                             hsn:hsn,
                             products:products,
                             qty:qty,
                             mrp:mrp,
-                            actual_mrp:actual_mrp,
+                            special_rate:special_rate,
                             gst:gst,
                             cess:cess,
                             id:ids,

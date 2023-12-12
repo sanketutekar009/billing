@@ -116,11 +116,12 @@ class Bills_model extends CI_Model{
         //echo "<pre>";print_r($_POST);exit;
 
         $invoices = array(
-            "coporate_id" => 1,
+            "coporate_id" => trim($this->input->post("company_id")),
             "invoice_number" => trim($this->input->post("bill_number")),
             "invoice_date" => date("Y-m-d", strtotime($this->input->post("bill_date"))),
             "bill_discount" => $this->input->post("bill_discount"),
             "bill_contact_person" => $this->input->post("bill_contact_person"),
+            "print_details" => $this->input->post("print_details"),
             "created_by" => $created_by
         );
 
@@ -135,7 +136,7 @@ class Bills_model extends CI_Model{
                     "qty" => trim($_POST["qty"][$keys]),
                     "item_name" => trim($_POST["products"][$keys]),
                     "mrp" => trim($_POST["mrp"][$keys]),
-                    "actual_mrp" => trim($_POST["actual_mrp"][$keys]),
+                    "special_rate" => trim($_POST["special_rate"][$keys]),
                     "cgst" => trim($_POST["gst"][$keys]/2),
                     "sgst" => trim($_POST["gst"][$keys]/2),
                     "cess" => trim($_POST["cess"][$keys]),
@@ -159,11 +160,12 @@ class Bills_model extends CI_Model{
         //echo "<pre>";print_r($_POST);exit;
 
         $invoices = array(
-            "coporate_id" => 1,
+            "coporate_id" => trim($this->input->post("company_id")),
             "invoice_number" => trim($this->input->post("bill_number")),
             "invoice_date" => date("Y-m-d", strtotime($this->input->post("bill_date"))),
             "bill_discount" => trim($this->input->post("bill_discount")),
             "bill_contact_person" => trim($this->input->post("bill_contact_person")),
+            "print_details" => $this->input->post("print_details"),
         );
 
         $this->db->where("id", $this->input->post("main_id"));
@@ -181,7 +183,7 @@ class Bills_model extends CI_Model{
                         "qty" => trim($_POST["qty"][$keys]),
                         "item_name" => trim($_POST["products"][$keys]),
                         "mrp" => trim($_POST["mrp"][$keys]),
-                        "actual_mrp" => trim($_POST["actual_mrp"][$keys]),
+                        "special_rate" => trim($_POST["special_rate"][$keys]),
                         "cgst" => trim($_POST["gst"][$keys]/2),
                         "sgst" => trim($_POST["gst"][$keys]/2),
                         "cess" => trim($_POST["cess"][$keys]),
@@ -193,6 +195,7 @@ class Bills_model extends CI_Model{
                         "qty" => trim($_POST["qty"][$keys]),
                         "item_name" => trim($_POST["products"][$keys]),
                         "mrp" => trim($_POST["mrp"][$keys]),
+                        "special_rate" => trim($_POST["special_rate"][$keys]),
                         "cgst" => trim($_POST["gst"][$keys]/2),
                         "sgst" => trim($_POST["gst"][$keys]/2),
                         "cess" => trim($_POST["cess"][$keys]),

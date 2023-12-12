@@ -71,7 +71,8 @@ $.fn.editableTableWidget = function (options) {
 					var Obj = $(".autocomplete:eq('"+eq+"')").parent();
 					$("td:eq('2')", Obj).text(hsn);
 					$("td:eq('3')", Obj).text(mrp);
-					$("td:eq('4')", Obj).text(gst);
+					$("td:eq('4')", Obj).text(0);
+					$("td:eq('5')", Obj).text(gst);
 					$(".autocomplete:eq('"+eq+"')").text(product_selected);   
 				}
 				//console.log(product_selected);
