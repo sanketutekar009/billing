@@ -7,13 +7,8 @@
                     <div class="row">
                         <div class="input-field col s12 m3 mT40">
                         <label for="" class="">Company</label>
-                            <input type="text" name="company_id" class="" value="<?php echo $bill_details['0']["coporate_id"]; ?>" />
-                            <!-- <select name="company_id">
-                                <option value="" disabled selected>Choose Company</option>
-                                <?php // if(!empty($customer_details)){ foreach($customer_details as $keys=>$values){ ?>
-                                    <option value="<?php echo $values["id"]; ?>" <?php if($values["id"] == $bill_details['0']["coporate_id"]){ ?>selected<?php } ?>><?php if(strlen($values["code"]) > 0){echo "[".$values["code"]."] ";} echo $values["company_name"]; ?></option>
-                                <?php // }} ?>
-                            </select> -->
+                            <input type="text" class="search-company" value="<?php echo $bill_details['0']["coporate_id"]; ?>" />
+                            <input type="hidden" name="company_id" />
                         </div>
                         <div class="input-field col s6 m1 mT40">
                             <label for="" class="">Bill Number</label>
@@ -126,13 +121,82 @@
         });
 
         $("html, body").on("click",function(){
-            $(".autocomplete-content").remove();
+            $(".autocomplete-content, .search-company-autocomplete-content").remove();
         });
 
         $(document).on("focus","td",function(e){
-            $(".autocomplete-content").remove();
+            $(".autocomplete-content, .search-company-autocomplete-content").remove();
         });
 
+        // Company search auto suggest
+        $(document).on("keyup",".search-company",function(e){
+            if(e.keyCode == "40"){
+                next_index = parseInt(parseInt($(".focus").index())+parseInt(1));
+                //console.log("40 "+next_index);
+                $(".search-company-autocomplete-content li:eq('"+next_index+"')").focus();                             
+                $(".focus").removeClass("focus");                   
+                $(".search-company-autocomplete-content li:eq('"+next_index+"')").addClass("focus");
+                $(this).focus();
+            }else if(e.keyCode == "38"){
+                prev_index = parseInt(parseInt($(".focus").index())-parseInt(1));
+                //console.log("38 "+prev_index);
+                $(".search-company-autocomplete-content li:eq('"+prev_index+"')").focus();                             
+                $(".focus").removeClass("focus");                   
+                $(".search-company-autocomplete-content li:eq('"+prev_index+"')").addClass("focus");
+                $(this).focus();
+            }else if(e.keyCode == "13"){
+                var company_name_selected = $(".focus").text();
+                if(company_name_selected != "No Result Found"){
+                    $('.search-company').val(company_name_selected);
+                    $('input[name="company_id"]').val($('.focus').attr('id'));
+                    $(".search-company-autocomplete-content").remove();
+                }
+            }else{
+                var search_value = $.trim($(this).val());
+                if (search_value.length > 2) {
+                    delay(function(){
+                        $.ajax({
+                            type:'post',
+                            url:base_url+"Customers/search_customers",
+                            data:{
+                                customer_name:search_value
+                            },
+                            dataType:'json',
+                            success:function(val){
+                                var auto_suggest = '<ul class="search-company-autocomplete-content dropdown-content" style="position:absolute;">';
+                                    $.each(val, function(i, values){
+                                        auto_suggest += '<li id="'+values.id+'">'+values.company_name+'</li>';
+                                    });
+                                    auto_suggest += '</ul>';
+                                $(".search-company-autocomplete-content").remove();
+                                $("body").after(auto_suggest);
+                                var eq = $(".search-company").attr("position");
+                                var position = $(".search-company").offset();
+                                var width = $(".search-company").outerWidth();
+                                var height = $(".search-company").outerHeight();
+                                $(".search-company-autocomplete-content").css({
+                                    top:position.top+height,
+                                    left:position.left,
+                                    width:width
+                                });
+                            }
+                        });
+                    }, 500 );
+                }else{
+                    $(".search-company-autocomplete-content").remove();
+                }
+            }
+        });
+
+        $(document).on("click",".focus, .search-company-autocomplete-content li",function(){
+            var company_name_selected = $(this).text();
+            if(company_name_selected != "No Result Found"){
+                $('.search-company').val(company_name_selected);
+                $('input[name="company_id"]').val($(this).attr('id'));
+            }   
+        });
+
+        // Product search auto suggest
         $(document).on("keyup",".autocomplete-textarea",function(e){
             if(e.keyCode == "40"){
                 next_index = parseInt(parseInt($(".focus").index())+parseInt(1));
