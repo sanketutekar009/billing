@@ -87,9 +87,17 @@
 			text-align: center;
 			margin-top: 10px;
     }
+		.company-details {
+			border-top: 1px dashed #000;
+		}
+		.company-details p {
+			margin:2px 0px;
+			padding:0;
+		}
 </style>
 </head>
 <body>
+	<?php // echo '<pre>';print_r($bill_details["0"]['print_details'])?>
     <div class="receipt">
         <div class="receipt-header">
 					<p class="receipt-title"><?php echo $billDetails_array["invoice_title"]; ?></p>
@@ -106,6 +114,12 @@
 							<span>Date</span>
 							<span><?php echo date("d/m/Y", strtotime($bill_details["0"]["invoice_date"])); ?></span>
             </div>
+						<?php if ($bill_details["0"]['print_details'] == 1){ ?>
+							<div class="company-details">
+								<p class="txt-left">M/S. <?php echo $bill_details["0"]["company_name"]; ?></p>
+								<p class="txt-left"><?php echo $bill_details["0"]["company_address"]; ?></p>
+							</div>
+						<?php } ?>
 						<div class="invoice-items-container">
 							<table>
                 <tr>
@@ -123,9 +137,9 @@
 									<tr>
 										<td class="txt-left"><?php echo $values['item_name']; ?></td>
 										<td class="txt-right"><?php $total_qty += $values['qty']; echo $values['qty']; ?></td>
-										<td class="txt-right"><?php if ($values['mrp'] != $values['actual_mrp']) { echo $values['actual_mrp']; } else { echo convert_indian_currency($values['mrp']); } ?></td>
+										<td class="txt-right"><?php echo convert_indian_currency($values['mrp']); ?></td>
 										<?php if($has_special_rate == "yes"){ ?>
-											<td class="txt-right"><?php if ($values['mrp'] != $values['actual_mrp']) { $special_amount += $values['actual_mrp']-$values['mrp']; echo convert_indian_currency($values['mrp']); }else { echo '-';} ?></td>
+											<td class="txt-right"><?php if ($values['special_rate'] != 0) { $special_amount += ($values['mrp']-$values['special_rate'])*$values['qty']; echo convert_indian_currency($values['special_rate']); }else { echo '-';} ?></td>
 										<?php } ?>
 										<td class="txt-right"><?php $net_amount += $values['final_amount']; echo convert_indian_currency($values['final_amount']); ?></td>
 									</tr>

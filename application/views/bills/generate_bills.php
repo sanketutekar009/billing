@@ -2,13 +2,14 @@
     <div class="wrapper">
         <section id="content">
                 <!--start container-->
+                <?php // echo '<pre>';print_r($bill_details);?>
                 <div class="container-fluid">
                     <!--card stats start-->
                     <div class="row">
                         <div class="input-field col s12 m3 mT40">
                         <label for="" class="">Company</label>
-                            <input type="text" class="search-company" value="<?php echo $bill_details['0']["coporate_id"]; ?>" />
-                            <input type="hidden" name="company_id" />
+                            <input type="text" class="search-company" value="<?php echo $bill_details['0']["company_name"]; ?>" />
+                            <input type="hidden" name="company_id" value="<?php echo $bill_details['0']["coporate_id"]; ?>"/>
                         </div>
                         <div class="input-field col s6 m1 mT40">
                             <label for="" class="">Bill Number</label>
@@ -29,8 +30,8 @@
                         <div class="col s4 m1 mT40">
                             <select class="browser-default" name="print_details">
                                 <option value="" disabled>Print Details</option>
-                                <option value="0" selected>No</option>
-                                <option value="1">Yes</option>
+                                <option value="0" <?php if ($bill_details['0']['print_details'] != '1'){ ?>selected<?php } ?>>No</option>
+                                <option value="1" <?php if ($bill_details['0']['print_details'] == '1'){ ?>selected<?php } ?>>Yes</option>
                             </select>
                         </div>
                         <div class="input-field col s12 m2 mT40">
@@ -69,6 +70,7 @@
                                                 <td><?php echo $values["qty"]; ?></td>
                                                 <td class="autocomplete"><?php echo $values["item_name"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["hsn"]; ?></td>
+                                                <td><?php echo $values["mrp"]; ?></td>
                                                 <td><?php echo $values["special_rate"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["cgst"]+$values["sgst"]; ?></td>
                                                 <td style="display: none;"><?php echo $values["cess"]; ?></td>

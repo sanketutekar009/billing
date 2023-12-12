@@ -337,7 +337,8 @@ class Bills extends My_Controller {
 					// Sum both CGST & SGST
                     $values["gst"] = $values["cgst"]+$values["sgst"];
                     // Calculate the rate from MRP
-                    $values["rate"] = (($values["mrp"]*100)/(100*(1+(($values["gst"]+$values["cess"])/100))));
+                    $mrp = ($values["special_rate"] != 0 ? $values["special_rate"]: $values["mrp"]);
+                    $values["rate"] = (($mrp*100)/(100*(1+(($values["gst"]+$values["cess"])/100))));
                     
                     // Calculate Taxes for individual items
                     $cgst = ($values["rate"]*($values["cgst"]/100));
@@ -365,7 +366,7 @@ class Bills extends My_Controller {
                     $products["breakup"]["cgst"] += $cgst_amount;
                     $products["breakup"]["sgst"] += $sgst_amount;
                     $products["breakup"]["cess"] += $cess_amount;
-                    if ($values["mrp"] !== $values["actual_mrp"]) {
+                    if ($values["special_rate"]) {
                         $products["has_special_rate"] = "yes";
                     }
 
