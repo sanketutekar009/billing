@@ -151,7 +151,7 @@ class Bills extends My_Controller {
         //echo "<pre>";print_r($session_data["id"]);exit;
         $response = $this->bills->insert_bill($session_data["id"]);
         if($response != "error"){
-            echo json_encode("success");
+            echo json_encode($response);
             $this->update_bill_amount($response, "no");
         }else{
             echo json_encode("error");

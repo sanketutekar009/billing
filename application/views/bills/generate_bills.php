@@ -372,8 +372,8 @@
                             cess:cess
                         },
                         success:function(val){
-                            if($.trim(val) == "success"){
-                                $(".alert-text").text("Data successfully added");
+                            if($.trim(val) != "error"){
+                                window.location.href = '/print-bill/' + val;
                             }else{
                                 $(".alert-text").text("Please try again");
                             }
