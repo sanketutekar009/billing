@@ -26,6 +26,7 @@
 			text-align: center;
 			text-transform: uppercase;
 			font-size: 20px !important;
+			font-family: arial !important;
 		}
     .receipt-header {
 			text-align: center;
@@ -85,8 +86,10 @@
     }
     .footer {
 			text-align: center;
-			margin-top: 10px;
     }
+		.footer p {
+			margin: 5px 0px 0px 0px;
+		}
 		.company-details {
 			border-top: 1px dashed #000;
 		}
@@ -97,22 +100,19 @@
 </style>
 </head>
 <body>
-	<?php // echo '<pre>';print_r($bill_details["0"]['print_details'])?>
+	<?php // echo '<pre>';print_r($bill_details["0"])?>
     <div class="receipt">
         <div class="receipt-header">
 					<p class="receipt-title"><?php echo $billDetails_array["invoice_title"]; ?></p>
 					<p><?php echo $billDetails_array["invoice_address"]; ?></p>
 					<p>Mobile: <?php echo $billDetails_array["invoice_contact_number"]; ?></p>
-					<!-- <p>Paytm <?php // echo $billDetails_array["invoice_contact_number"]; ?></p> -->
+					<p>GST: <?php echo $bill_details["0"]["gst_number"]; ?></p>
+					<p>FSSAI: 11517005000179</p>
         </div>
         <div class="receipt-body">
             <div class="item">
-							<span>Bill No.</span>
-							<span><?php echo $billDetails_array["invoice_prefix"]; ?><?php echo $bill_details["0"]["invoice_number"]; ?></span>
-            </div>
-            <div class="item">
-							<span>Date</span>
-							<span><?php echo date("d/m/Y", strtotime($bill_details["0"]["invoice_date"])); ?></span>
+							<span>Bill No. <?php echo $billDetails_array["invoice_prefix"]; ?><?php echo $bill_details["0"]["invoice_number"]; ?></span>
+							<span>Date <?php echo date("d/m/Y", strtotime($bill_details["0"]["invoice_date"])); ?></span>
             </div>
 						<?php if ($bill_details["0"]['print_details'] == 1){ ?>
 							<div class="company-details">
