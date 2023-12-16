@@ -7,8 +7,8 @@
                     <!--card stats start-->
                     <div class="row">
                         <div class="input-field col s12 m3 mT40">
-                        <label for="" class="">Company</label>
-                            <input type="text" class="search-company" value="<?php echo $bill_details['0']["company_name"]; ?>" />
+                        <label for="" class="">Customer Name</label>
+                            <input type="text" name="search_company" class="search-company" value="<?php echo $bill_details['0']["company_name"]; ?>" />
                             <input type="hidden" name="company_id" value="<?php echo $bill_details['0']["coporate_id"]; ?>"/>
                         </div>
                         <div class="input-field col s6 m1 mT40">
@@ -357,6 +357,7 @@
                         dataType:"json",
                         data:{
                             company_id:$("input[name='company_id']").val(),
+                            customer_name:$("input[name='search_company']").val(),
                             bill_number:$("input[name='bill_number']").val(),
                             purchase_order_number:$("input[name='purchase_order_number']").val(),
                             bill_date:$("input[name='bill_date']").val(),
@@ -387,6 +388,7 @@
                         dataType:"json",
                         data:{
                             company_id:$("input[name='company_id']").val(),
+                            customer_name:$("input[name='search_company']").val(),
                             bill_number:$("input[name='bill_number']").val(),
                             purchase_order_number:$("input[name='purchase_order_number']").val(),
                             bill_date:$("input[name='bill_date']").val(),

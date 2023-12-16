@@ -44,7 +44,7 @@
                         <table class="bordered">
                             <thead>
                                 <tr>
-                                    <th class="txt-left">Company Name</th>
+                                    <th class="txt-left">Name</th>
                                     <th class="txt-right">Invoice Number</th>
                                     <th class="txt-center">Month</th>
                                     <th class="txt-right">Amount</th>
@@ -53,9 +53,14 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php // echo '<pre>';print_r($bill_details);?>
                                 <?php if(!empty($bill_details)){ foreach($bill_details as $keys=>$values){ ?>
                                     <tr>
-                                        <td class="txt-left"><?php if(strlen($values["code"]) > 0){echo "[".$values["code"]."] ";} echo $values["company_name"]; ?></td>
+                                        <?php if ($values["coporate_id"] != 1) { ?>
+                                            <td class="txt-left"><?php if(strlen($values["code"]) > 0){echo "[".$values["code"]."] ";} echo $values["company_name"]; ?></td>
+                                        <?php } else { ?>
+                                            <td class="txt-left"><?php echo $values["customer_name"]; ?></td>
+                                        <?php } ?>
                                         <td class="txt-right"><?php echo $values["invoice_number"]; ?></td>
                                         <td class="txt-center"><?php echo date("M-Y", strtotime($values["invoice_date"])); ?></td>
                                         <td class="txt-right">&#8377;<?php echo convert_indian_currency($values["invoice_amount"]); ?></td>

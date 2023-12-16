@@ -49,7 +49,7 @@ class Bills_model extends CI_Model{
             case "search_page":
                 $this->db->select("i.*, c.company_name, c.code");
                 $this->db->from(INVOICE." i");
-                $this->db->join(COMPANIES." c","i.coporate_id=c.id");
+                $this->db->join(COMPANIES." c","i.coporate_id=c.id", "LEFT");
                 $this->db->where("i.is_active", "1");
                 
                 // Filter by date 
@@ -84,7 +84,7 @@ class Bills_model extends CI_Model{
             case "default":
                 $this->db->select("i.*, c.company_name, c.code, id.*, i.id as main_id, id.id as item_id, company_address, company_email, company_number, gst_number");
                 $this->db->from(INVOICE." i");
-                $this->db->join(COMPANIES." c","i.coporate_id=c.id");
+                $this->db->join(COMPANIES." c","i.coporate_id=c.id", "LEFT");
                 $this->db->join(INVOICE_DETAILS." id","i.id=id.invoice_id");
                 $this->db->where("i.id", $id);
                 $this->db->where("i.is_active", "1");
@@ -116,7 +116,8 @@ class Bills_model extends CI_Model{
         //echo "<pre>";print_r($_POST);exit;
 
         $invoices = array(
-            "coporate_id" => trim($this->input->post("company_id")),
+            "coporate_id" => ($this->input->post("company_id") == 0 ? 1 : trim($this->input->post("company_id"))),
+            "customer_name" => trim($this->input->post("customer_name")),
             "invoice_number" => trim($this->input->post("bill_number")),
             "invoice_date" => date("Y-m-d", strtotime($this->input->post("bill_date"))),
             "bill_discount" => $this->input->post("bill_discount"),
@@ -158,9 +159,9 @@ class Bills_model extends CI_Model{
         //echo "<pre>";print_r($_POST);exit;
         $this->db->trans_start();
         //echo "<pre>";print_r($_POST);exit;
-
         $invoices = array(
-            "coporate_id" => trim($this->input->post("company_id")),
+            "coporate_id" => ($this->input->post("company_id") == 0 ? 1 : trim($this->input->post("company_id"))),
+            "customer_name" => trim($this->input->post("customer_name")),
             "invoice_number" => trim($this->input->post("bill_number")),
             "invoice_date" => date("Y-m-d", strtotime($this->input->post("bill_date"))),
             "bill_discount" => trim($this->input->post("bill_discount")),

@@ -106,7 +106,7 @@
 					<p class="receipt-title"><?php echo $billDetails_array["invoice_title"]; ?></p>
 					<p><?php echo $billDetails_array["invoice_address"]; ?></p>
 					<p>Mobile: <?php echo $billDetails_array["invoice_contact_number"]; ?></p>
-					<p>GST: <?php echo $bill_details["0"]["gst_number"]; ?></p>
+					<p>GST: <?php echo $billDetails_array["gst_number"]; ?></p>
 					<p>FSSAI: 11517005000179</p>
         </div>
         <div class="receipt-body">
@@ -116,8 +116,10 @@
             </div>
 						<?php if ($bill_details["0"]['print_details'] == 1){ ?>
 							<div class="company-details">
-								<p class="txt-left">M/S. <?php echo $bill_details["0"]["company_name"]; ?></p>
-								<p class="txt-left"><?php echo $bill_details["0"]["company_address"]; ?></p>
+								<p class="txt-left">M/S. <?php echo ($bill_details["0"]["coporate_id"] != 1 ? $bill_details["0"]["company_name"] : $bill_details["0"]["customer_name"]) ; ?></p>
+								<?php if ($bill_details["0"]["coporate_id"] != 1) { ?>
+									<p class="txt-left"><?php echo $bill_details["0"]["company_address"]; ?></p>
+								<?php } ?>
 							</div>
 						<?php } ?>
 						<div class="invoice-items-container">
